@@ -36,7 +36,7 @@ async def multiply_numbers(request: OperationRequest):
 @app.post("/Деление v2")
 async def divide_numbers(request: OperationRequest):
     if request.num2 == 0:
-        return {"error": "Division by zero is not allowed"}  # Проверка деления на ноль
+        return {"error": "Делить на ноль нельзя"}  # Проверка деления на ноль
     result = request.num1 / request.num2  # Выполняем деление чисел
     return {"result": result}  # Возвращаем результат в формате JSON
 
